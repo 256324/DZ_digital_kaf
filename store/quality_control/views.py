@@ -38,7 +38,8 @@ class BugDetailView(DetailView):
         response_html = (f'<h1>{bug.title}</h1><p>description: {bug.description} <br>'
                          f'status: {bug.status} <br>'
                          f'priority: {bug.priority} <br>'
-                         f'project: {bug.project}</p>')
+                         f'project: {bug.project} <br>'
+                         f'task: {bug.task}</p>')
         return HttpResponse(response_html)
 
 
@@ -62,7 +63,8 @@ class FeatureDetailView(DetailView):
         response_html = (f'<h1>{feature.title}</h1><p>description: {feature.description} <br>'
                          f'status: {feature.status} <br>'
                          f'priority: {feature.priority} <br>'
-                         f'project: {feature.project}</p>')
+                         f'project: {feature.project} <br>'
+                         f'task: {feature.task}</p>')
         return HttpResponse(response_html)
 
 

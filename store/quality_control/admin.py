@@ -6,7 +6,7 @@ from .models import FeatureRequest
 class BugReportAdminInline(admin.TabularInline):
     model = BugReport
     extra = 0
-    list_display = ('title','project', 'status', 'priority', 'created_at')
+    list_display = ('title', 'project', 'task', 'status', 'priority', 'created_at')
     list_filter = ('title', 'status')
     search_fields = ('title', 'status')
     ordering = ('created_at',)
@@ -17,7 +17,7 @@ class BugReportAdminInline(admin.TabularInline):
 
 @admin.register(BugReport)
 class BugReportAdmin(admin.ModelAdmin):
-    list_display = ('title','project', 'task', 'status', 'priority', 'created_at')
+    list_display = ('title', 'project', 'task', 'status', 'priority', 'created_at')
     list_filter = ('title', 'status')
     search_fields = ('title', 'status')
     ordering = ('created_at',)
