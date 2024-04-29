@@ -1,6 +1,10 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+
+    <p><a href="{% url 'quality_control:update_bugs' bugreport.id %}">Изменить сообщение о ошибке</a></p>
+
+    <p><a href="{% url 'quality_control:delete_bug' bugreport.id %}"onclick="return confirm('Вы уверены, что хотите удалить это сообщение об ошибке?');">Удалить сообщение об ошибке</a></p>
     <h1>{{ bugreport.title }}</h1>
     <p>Description: {{ bugreport.description }}</p>
     <p>Status: {{bugreport.status}}<p>
